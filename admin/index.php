@@ -11,7 +11,7 @@ echo '
 </form>' ;
 
 if(isset($_POST["theme"])){
-    if(!empty($_POST["site_name"])&!empty($_POST["site_url"])&!empty($_POST["coment"])) {
+    if(!empty($_POST["site_name"])&!empty($_POST["site_url"])&!empty($_POST["theme"])) {
 
         echo $_POST["site_name"];
         echo $_POST["site_url"];
