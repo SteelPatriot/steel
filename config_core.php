@@ -1,7 +1,9 @@
 
 <?php
-$host = 'localhost';
-$database = 'steel';
-$user = 'steel';
-$password = 'vivi123';
+return[
+'host' => 'localhost',
+'database' =>'steel',
+    'usensne' =>'steel',
+'password' => 'vivi123'
+];
 ?>
