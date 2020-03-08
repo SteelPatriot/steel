@@ -19,9 +19,7 @@ if(isset($_POST["theme"])){
         $theme_url = $_POST["theme_url"];
         $coment = $_POST["coment"];
         $stmt->execute();
-
-        printf("%d Row inserted.\n", $stmt->affected_rows);
-
+$linc->commit();
         $stmt->close();
     }
 
