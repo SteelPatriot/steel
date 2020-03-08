@@ -1,7 +1,7 @@
 <?php
 require_once "../core/Core.php";
 require_once "../config_core.php";
-$insert_theme = "INSERT INTO `theme`(`theme_name`, `theme_url`, `theme_coment`) VALUES (?, ?, ?)";
+$insert_theme = "INSERT INTO theme VALUES (?, ?, ?)";
 $core = new Core();
 $linc = $core->db($host, $user, $password, $database);
 
