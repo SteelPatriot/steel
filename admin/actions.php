@@ -16,7 +16,7 @@ if(isset($_POST["theme"])){
         $theme_url = $_POST["theme_url"];
         $coment = $_POST["coment"];
 
-        $stmt = $linc->prepare("INSERT INTO theme ('theme_name', 'theme_url', 'theme_coment') VALUES (?, ?, ?)");
+        $stmt = $linc->prepare("INSERT INTO theme (`theme_name`, `theme_url`, `theme_coment`) VALUES (?, ?, ?)");
         $stmt->bind_param('sss', $theme_name, $theme_url, $coment);
 
         $stmt->execute();
