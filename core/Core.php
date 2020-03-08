@@ -7,7 +7,6 @@ class Core
         $link = new mysqli($host, $user, $password, $database)
         or die("Ошибка " . mysqli_error($host, $user, $password, $database));
         return $link;
-        //mysqli_close($link);
     }
 
 }
