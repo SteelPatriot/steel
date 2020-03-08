@@ -1,7 +1,7 @@
 
 <?php
 $host = 'localhost';
-$database = 'compstore';
-$user = 'root';
-$password = '1234567';
+$database = 'steel';
+$user = 'steel';
+$password = 'vivi123';
 ?>
