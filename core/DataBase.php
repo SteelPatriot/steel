@@ -9,7 +9,7 @@ class DataBase
 
         $this->dataInfo = require_once "../config_core.php";
         $dsn = "mysql:host=localhost; dbname=steel";
-        $pdo = new PDO($dsn, "steel", "vivi123");
+        $pdo = new PDO($dsn, "root", "");
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         return $pdo;
 }
