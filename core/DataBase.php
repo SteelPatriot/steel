@@ -16,4 +16,4 @@ public function linc (){
         return $this->connect();
 }
 }
-require_once "../config_core.php";
+echo require_once "../config_core.php";
