@@ -16,7 +16,7 @@ if(isset($_POST["theme"])){
         $coment = $_POST["coment"];
 
 
-        $linc = $lincDB->prepare("INSERT INTO theme (theme_name, theme_url, theme_coment) VALUES (?, ?, ?)");
+        $linc = $lincDB->prepare("INSERT INTO `theme` (`theme_name`, `theme_url`, `theme_coment`) VALUES (?, ?, ?)");
         $linc->bind_param('sss', $theme_name, $theme_url, $coment);
         $linc->execute();
         $linc->commit();
