@@ -21,7 +21,6 @@ if(isset($_POST["theme"])){
 
         $stmt->execute();
         $linc->commit();
-        $stmt->close();
     }
 
 }
