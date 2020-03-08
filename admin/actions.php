@@ -1,9 +1,9 @@
 <?php
-require_once "../core/Core.php";
+//require_once "../core/Core.php";
 require_once "../config_core.php";
 require_once "../core/DataBase.php";
 
-$core = new Core();
+//$core = new Core();
 $db = new DataBase();
 $lincDB = $db->linc();
 if(isset($_POST["theme"])){
