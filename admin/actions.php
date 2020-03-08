@@ -20,7 +20,7 @@ if(isset($_POST["theme"])){
         $stmt->bind_param('sss', $theme_name, $theme_url, $coment);
 
         $stmt->execute();
-$linc->commit();
+        $linc->commit();
         $stmt->close();
     }
 
