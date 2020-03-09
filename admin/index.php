@@ -1,9 +1,9 @@
 <?php
 
-
+namespace\Core\Core::class;
 require_once "../core/Core.php";
 
-$core = new Core\Core();
+$core = new Core();
 
 $core->deamonTheme();
 
