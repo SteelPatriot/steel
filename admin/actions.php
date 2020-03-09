@@ -19,8 +19,8 @@ if(isset($_POST["theme_url"])){
         $sql = "INSERT INTO theme (theme_name, theme_url, theme_coment) VALUES (?,?,?)";
         $statment = $db->prepare($sql);
 
-        $statment -> bindParam("sss", $_POST["theme_name"], $_POST["theme_url"], $_POST["coment"]);
-        $statment -> execute();
+        //$statment -> ("sss",);
+        $statment -> execute(array( $_POST["theme_name"], $_POST["theme_url"], $_POST["coment"]));
         echo $_POST['theme_name'];
         echo $_POST['theme_url'];
         echo $_POST['coment'];
