@@ -2,10 +2,10 @@
 
 
 require_once "../core/Core.php";
-use SteelCore;
-$core = new Core();
+//use SteelCore;
+$core = new SteelCore\Core();
 
-$core->deamonTheme();
+
 
 
 echo '
