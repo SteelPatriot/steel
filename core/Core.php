@@ -1,12 +1,9 @@
 <?php
 
 require_once "../core/DataBase.php";
+
 class Core
 {
-   public function Core(){
-        session_start();
-        $this->deamonTheme();
-   }
 
     public function deamonTheme(){
         $pdo = new DataBase();
