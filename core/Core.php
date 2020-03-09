@@ -3,9 +3,9 @@ namespace Core;
 
 class Core
 {
-    private function Core(){
-        session_start();
-    }
+   // private function Core(){
+    //    session_start();
+  //  }
 
     protected function deamonTheme(){
         $pdo = new DataBase();
