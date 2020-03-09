@@ -3,7 +3,7 @@
 
 require_once "../core/Core.php";
 
-$core = new  Core();
+$core = new Core\Core();
 
 $core->deamonTheme();
 
