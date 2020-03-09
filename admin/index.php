@@ -5,7 +5,7 @@ namespace Core;
 
 $core = new Core();
 
-$core->;
+$core->deamonTheme();
 
 echo '
 <br>
