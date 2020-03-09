@@ -1,9 +1,9 @@
 <?php
-namespace Core;
+
 
 require_once "../core/Core.php";
-
-$core = new \Core();
+use SteelCore;
+$core = new Core();
 
 $core->deamonTheme();
 
