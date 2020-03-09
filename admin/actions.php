@@ -4,7 +4,7 @@ require_once "../config_core.php";
 require_once "../core/DataBase.php";
 
 //$core = new Core();
-$db = new DataBase();
+//$db = new DataBase();
 //$lincDB = $db->linc();
 if(isset($_POST["theme"])){
     if(!empty($_POST["theme_name"])&!empty($_POST["theme_url"])&!empty($_POST["coment"])) {
@@ -47,7 +47,7 @@ if(isset($_POST["theme"])){
         $statment -> bindParam(":theme_url", $_POST['theme_url']);
         $statment -> bindParam(":theme_coment", $_POST['coment']);
         $statment -> execute();
-
+        echo $_POST['coment'];
 
     }
 
