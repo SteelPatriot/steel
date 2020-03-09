@@ -9,7 +9,7 @@ $options = [
 ];
 $dsn = "mysql:host=localhost;dbname=steel;charset=utf8";
 try {
-    $pdo = new PDO($dsn, "root", "", $options);
+    $pdo = new PDO($dsn, "root", "vivi123", $options);
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
