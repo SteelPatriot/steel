@@ -16,12 +16,10 @@ if(isset($_POST["theme_url"])){
     if(!empty($_POST["theme_name"])&!empty($_POST["theme_url"])&!empty($_POST["coment"])) {
 
 
-        $sql = "INSERT INTO theme (theme_name, theme_url, theme_coment) VALUES (:theme_name, :theme_url, :theme_coment)";
+        $sql = "INSERT INTO theme (theme_name, theme_url, theme_coment) VALUES (?,?,?)";
         $statment = $db->prepare($sql);
-        //$a1 = "steel";$a2 = "theme/steel/";$a3 = "steel";
-        $statment -> bindParam(":theme_name", $_POST["theme_name"]);
-        $statment -> bindParam(":theme_url", $_POST["theme_url"]);
-        $statment -> bindParam( ":theme_coment", $_POST["coment"]);
+
+        $statment -> bindParam("sss", $_POST["theme_name"], $_POST["theme_url"], $_POST["coment"]);
         $statment -> execute();
         echo $_POST['theme_name'];
         echo $_POST['theme_url'];
