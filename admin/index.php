@@ -1,11 +1,12 @@
 <?php
 namespace Core;
 
-//require_once "../core/Core.php";
+require_once "../core/Core.php";
 
-$core = new Core();
+$core = new \Core();
 
 $core->deamonTheme();
+
 
 echo '
 <br>
