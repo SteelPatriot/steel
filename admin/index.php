@@ -1,11 +1,13 @@
 <?php
+session_start();
 
+$_SESSION['themeName'] = 'steel';
 
 require_once "../core/Core.php";
 //use SteelCore;
 $core = new Core();
 
-$core->deamonTheme();
+$core->deamonTheme($_SESSION['themeName']);
 
 
 echo '
