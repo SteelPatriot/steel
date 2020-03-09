@@ -30,12 +30,4 @@ if(isset($_POST["theme_url"])){
 
 }
 
-echo '
-<br>
-<form action="" method="post" >
-   <input type="text" name="theme_name">
-   <input type="text" name="theme_url">
-   <input type="text" name="coment">
-<input type="submit" value="Выполнить запрос" name="theme" >
-</form>' ;
 
