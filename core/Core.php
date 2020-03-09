@@ -1,6 +1,6 @@
 <?php
 namespace SteelCore;
-
+require_once "../core/DataBase.php";
 class Core
 {
    // private function Core(){
