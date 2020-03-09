@@ -4,7 +4,7 @@
 require_once "../core/DataBase.php";
 
 
-echo $_POST['coment'];
+
 
 $pdo = new DataBase();
 
@@ -12,7 +12,7 @@ $db = $pdo->linc();
 
 
 
-if(isset($_POST["site_url"])){
+if(isset($_POST["theme_url"])){
     if(!empty($_POST["theme_name"])&!empty($_POST["theme_url"])&!empty($_POST["coment"])) {
 
 
@@ -23,6 +23,9 @@ if(isset($_POST["site_url"])){
         $statment -> bindParam(":theme_url", $_POST["theme_url"]);
         $statment -> bindParam( ":theme_coment", $_POST["coment"]);
         $statment -> execute();
+        echo $_POST['theme_name'];
+        echo $_POST['theme_url'];
+        echo $_POST['coment'];
     }
 
 }
