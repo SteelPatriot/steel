@@ -21,7 +21,7 @@ if(isset($_POST["theme"])){
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $lincDB = $pdo->prepare("INSERT INTO theme(theme_name, theme_url, theme_coment) VALUES (?, ?, ?)");
+        $lincDB = $pdo->prepare("INSERT INTO theme(theme_name, theme_url, theme_coment) VALUES (:theme_name, :theme_url, :theme_coment)");
         //$lincDB->bind_param('sss', $theme_name, $theme_url, $coment);
         $lincDB->execute(array($theme_name, $theme_url, $coment));
         $lincDB->commit();
