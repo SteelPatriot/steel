@@ -20,7 +20,7 @@ if(isset($_POST["theme_url"])){
         $statment = $db->prepare($sql);
 
         //$statment -> ("sss",);
-        $statment -> execute(array( $_POST["theme_name"], $_POST["theme_url"], $_POST["coment"]));
+        $statment -> execute( $_POST["theme_name"], $_POST["theme_url"], $_POST["coment"]);
         echo $_POST['theme_name'];
         echo $_POST['theme_url'];
         echo $_POST['coment'];
