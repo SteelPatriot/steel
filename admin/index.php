@@ -16,3 +16,6 @@ echo '
    <input type="text" name="coment">
 <input type="submit" value="Выполнить запрос" name="theme" >
 </form>' ;
+
+
+require_once "../theme/steel/theme.php";

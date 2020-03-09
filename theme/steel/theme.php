@@ -4,14 +4,14 @@
     <title>Wedding website</title>
     <meta name="description" content="Wedding website">
     <meta name="keywords" content="wedding">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="/<?php $core->deamonTheme();?>css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
         <td>&nbsp;</td>
         <td width="766px">
-            <div><img src="images/tt.gif" alt="" width="766" height="13"></div>
+            <div><img src="/<?php $core->deamonTheme();?>images/tt.gif" alt="" width="766" height="13"></div>
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                     <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
