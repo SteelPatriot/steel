@@ -3,7 +3,7 @@
 
 require_once "../core/Core.php";
 //use SteelCore;
-$core = new SteelCore\Core();
+$core = new Core();
 
 $core->deamonTheme();
 
