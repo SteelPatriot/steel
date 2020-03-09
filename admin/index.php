@@ -1,15 +1,4 @@
 <?php
-
-
-echo '
-<br>
-<form action="" method="post" >
-   <input type="text" name="theme_name">
-   <input type="text" name="theme_url">
-   <input type="text" name="coment">
-<input type="submit" value="Выполнить запрос" name="theme" >
-</form>' ;
-
 if(isset($_POST["site_url"])){
     if(!empty($_POST["theme_name"])&!empty($_POST["theme_url"])&!empty($_POST["coment"])) {
 
@@ -56,3 +45,13 @@ if(isset($_POST["site_url"])){
     }
 
 }
+
+echo '
+<br>
+<form action="" method="post" >
+   <input type="text" name="theme_name">
+   <input type="text" name="theme_url">
+   <input type="text" name="coment">
+<input type="submit" value="Выполнить запрос" name="theme" >
+</form>' ;
+
