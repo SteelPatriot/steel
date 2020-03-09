@@ -7,7 +7,7 @@ class Core
     //    session_start();
   //  }
 
-    protected function deamonTheme(){
+    public function deamonTheme(){
         $pdo = new DataBase();
         $db = $pdo->linc();
 
@@ -20,5 +20,7 @@ class Core
         $array = $statment->fetch(PDO::FETCH_ASSOC);
         print_r($array);
     }
+
+
 
 }
