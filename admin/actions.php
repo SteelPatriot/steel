@@ -17,7 +17,7 @@ if(isset($_POST["site_url"])){
 
 
         $sql = "INSERT INTO theme (theme_name, theme_url, theme_coment) VALUES (:theme_name, :theme_url, :theme_coment)";
-        $statment = $pdo->prepare($sql);
+        $statment = $db->prepare($sql);
         //$a1 = "steel";$a2 = "theme/steel/";$a3 = "steel";
         $statment -> bindParam(":theme_name", $_POST["theme_name"]);
         $statment -> bindParam(":theme_url", $_POST["theme_url"]);
