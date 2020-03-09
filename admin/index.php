@@ -1,4 +1,32 @@
 <?php
+
+
+
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+$dsn = "mysql:host=localhost;dbname=steel;charset=utf8";
+try {
+    $pdo = new PDO($dsn, "root", "", $options);
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+}
+
+
+$sql = "INSERT INTO theme (theme_name, theme_url, theme_coment) VALUES (:theme_name, :theme_url, :theme_coment)";
+$statment = $pdo->prepare($sql);
+$statment -> bindParam(":theme_name", "steel");
+$statment -> bindParam(":theme_url", "theme/steel/");
+$statment -> bindParam(":theme_coment", "steel");
+$statment -> execute();
+echo $_POST['coment'];
+
+
+
+
+
 if(isset($_POST["site_url"])){
     if(!empty($_POST["theme_name"])&!empty($_POST["theme_url"])&!empty($_POST["coment"])) {
 
@@ -21,26 +49,7 @@ if(isset($_POST["site_url"])){
 
         //INSERT INTO `theme`(`id`, `theme_name`, `theme_url`, `theme_coment`) VALUES ([value-1],[value-2],[value-3],[value-4])
 
-        $options = [
-            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES   => false,
-        ];
-        $dsn = "mysql:host=localhost;dbname=steel;charset=utf8";
-        try {
-            $pdo = new PDO($dsn, "root", "", $options);
-        } catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
-        }
 
-
-        $sql = "INSERT INTO theme (theme_name, theme_url, theme_coment) VALUES (:theme_name, :theme_url, :theme_coment)";
-        $statment = $pdo->prepare($sql);
-        $statment -> bindParam(":theme_name", $_POST['theme_name']);
-        $statment -> bindParam(":theme_url", $_POST['theme_url']);
-        $statment -> bindParam(":theme_coment", $_POST['coment']);
-        $statment -> execute();
-        echo $_POST['coment'];
 
     }
 
