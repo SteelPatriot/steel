@@ -16,10 +16,10 @@ if(isset($_POST["theme"])){
         $coment = $_POST["coment"];
 
 
-        $linc = $lincDB->prepare("INSERT INTO `theme` (`theme_name`, `theme_url`, `theme_coment`) VALUES (?, ?, ?)");
-        $linc->bind_param('sss', $theme_name, $theme_url, $coment);
-        $linc->execute();
-        $linc->commit();
+        $lincDB->prepare("INSERT INTO `theme` (`theme_name`, `theme_url`, `theme_coment`) VALUES (?, ?, ?)");
+        $lincDB->bind_param('sss', $theme_name, $theme_url, $coment);
+        $lincDB->execute();
+        $lincDB->commit();
 
         //INSERT INTO `theme`(`id`, `theme_name`, `theme_url`, `theme_coment`) VALUES ([value-1],[value-2],[value-3],[value-4])
     }

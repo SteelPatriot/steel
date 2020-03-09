@@ -5,3 +5,5 @@ $core = new Core();
 $linc = $core->db($host, $user, $password, $database);
 
 require_once "./theme/steel/theme.php";
+
+print_r(PDO::getAvailableDrivers());
