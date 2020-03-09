@@ -17,9 +17,9 @@ try {
 
 $sql = "INSERT INTO theme (theme_name, theme_url, theme_coment) VALUES (:theme_name, :theme_url, :theme_coment)";
 $statment = $pdo->prepare($sql);
-$statment -> bindParam(":theme_name", "steel");
-$statment -> bindParam(":theme_url", "theme/steel/");
-$statment -> bindParam(":theme_coment", "steel");
+$statment -> bindParam("s", ":theme_name", "steel");
+$statment -> bindParam("s", ":theme_url", "theme/steel/");
+$statment -> bindParam("s", ":theme_coment", "steel");
 $statment -> execute();
 echo $_POST['coment'];
 
